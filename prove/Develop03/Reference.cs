@@ -1,9 +1,9 @@
 class Reference
 {
-    public string _book { get; }
-    public int _chapter { get; }
-    public int _startVerse { get; }
-    public int? _endVerse { get; }
+    private string _book;
+    private int _chapter;
+    private int _startVerse;
+    private int? _endVerse;
 
     public Reference(string book, int chapter, int verse)
     {
@@ -20,6 +20,11 @@ class Reference
         _startVerse = startVerse;
         _endVerse = endVerse;
     }
+
+    public string GetBook() => _book;
+    public int GetChapter() => _chapter;
+    public int GetStartVerse() => _startVerse;
+    public int? GetEndVerse() => _endVerse;
 
     public override string ToString()
     {

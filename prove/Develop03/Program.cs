@@ -30,10 +30,10 @@ class Program
             Scripture scripture = scriptures[rand.Next(scriptures.Length)];
             scripture.ResetWords();
 
-            while (!scripture.AllWordsHidden)
+            while (!scripture.AreAllWordsHidden())
             {
                 Console.Clear();
-                Console.WriteLine(scripture.DisplayText);
+                Console.WriteLine(scripture.GetDisplayText());
                 Console.WriteLine("\nPress ENTER to continue or type 'quit' to finish:");
                 string input = Console.ReadLine().Trim().ToLower();
 
@@ -44,7 +44,7 @@ class Program
             }
 
             Console.Clear();
-            Console.WriteLine(scripture.DisplayText);
+            Console.WriteLine(scripture.GetDisplayText());
             Console.WriteLine("\nAll words have been hidden or you chose to stop.");
 
             Console.Write("\nWould you like to try again? (yes/no): ");

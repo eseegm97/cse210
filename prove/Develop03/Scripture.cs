@@ -1,3 +1,5 @@
+using System;
+
 class Scripture
 {
     private Reference _reference;
@@ -11,25 +13,34 @@ class Scripture
         _words = Array.ConvertAll(wordStrings, word => new Word(word));
     }
 
-    public bool AllWordsHidden => Array.TrueForAll(_words, word => !word.IsVisible);
-
-    public string DisplayText
+    public bool AreAllWordsHidden()
     {
-        get
+        foreach (var word in _words)
         {
-            var result = _reference.ToString() + "\n\n";
-            foreach (var word in _words)
-                result += word.DisplayText + " ";
-            return result.TrimEnd();
+            if (word.IsVisible())
+                return false;
         }
+        return true;
+    }
+
+    public string GetDisplayText()
+    {
+        var result = _reference.ToString() + "\n\n";
+        foreach (var word in _words)
+        {
+            result += word.GetDisplayText() + " ";
+        }
+        return result.TrimEnd();
     }
 
     public void HideRandomWords(int count)
     {
         var visibleWords = new List<Word>();
         foreach (var word in _words)
-            if (word.IsVisible)
+        {
+            if (word.IsVisible())
                 visibleWords.Add(word);
+        }
 
         for (int i = 0; i < count && visibleWords.Count > 0; i++)
         {
