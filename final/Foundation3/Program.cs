@@ -10,8 +10,8 @@ class Program {
         };
 
         Lecture lecture = new Lecture() {
-            title = "C# Basics",
-            description = "Intro to C# programming",
+            title = "Lecture: Understanding Homer's Odyssey",
+            description = "A lecture on the themes of Homer's Odyssey",
             date = "2025-08-01",
             time = "10:00 AM",
             address = addr,
