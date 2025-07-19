@@ -5,7 +5,7 @@ class Address
     public string stateOrProvince;
     public string country;
 
-    public string _getFullAddress()
+    public string GetFullAddress()
     {
         return $"{street}, {city}, {stateOrProvince}, {country}";
     }

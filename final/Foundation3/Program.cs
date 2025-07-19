@@ -37,8 +37,8 @@ class Program {
             weatherForecast = "Sunny"
         };
 
-        Console.WriteLine(lecture._getFullDetails());
-        Console.WriteLine(reception._getFullDetails());
-        Console.WriteLine(gathering._getFullDetails());
+        Console.WriteLine(lecture.GetFullDetails());
+        Console.WriteLine(reception.GetFullDetails());
+        Console.WriteLine(gathering.GetFullDetails());
     }
 }

@@ -5,15 +5,15 @@ class Event {
     public string time;
     public Address address;
 
-    public string _getStandardDetails() {
+    public string GetStandardDetails() {
         return $"{title} on {date} at {time}";
     }
 
-    public virtual string _getFullDetails() {
-        return $"{_getStandardDetails()}, located at {address._getFullAddress()}";
+    public virtual string GetFullDetails() {
+        return $"{GetStandardDetails()}, located at {address.GetFullAddress()}";
     }
 
-    public string _getShortDescription() {
+    public string GetShortDescription() {
         return $"{title}: {description}";
     }
 }
