@@ -2,25 +2,25 @@ class Swimming : Activity
 {
     private int laps;
 
-    public void _setLaps(int l) { laps = l; }
+    public void SetLaps(int l) { laps = l; }
 
-    public override double _getDistance()
+    public override double GetDistance()
     {
         return laps * 0.05;
     }
 
-    public override double _getSpeed()
+    public override double GetSpeed()
     {
-        return _getDistance() / (_getMinutes() / 60.0);
+        return GetDistance() / (GetMinutes() / 60.0);
     }
 
-    public override double _getPace()
+    public override double GetPace()
     {
-        return _getMinutes() / _getDistance();
+        return GetMinutes() / GetDistance();
     }
 
-    public override string _getSummary()
+    public override string GetSummary()
     {
-        return $"{_getDate()} Swimming ({_getMinutes()} min): Distance {_getDistance():F2} km, Speed {_getSpeed():F2} kph, Pace: {_getPace():F2} min per km";
+        return $"{GetDate()} Swimming ({GetMinutes()} min): Distance {GetDistance():F2} km, Speed {GetSpeed():F2} kph, Pace: {GetPace():F2} min per km";
     }
 }

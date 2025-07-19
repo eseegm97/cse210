@@ -2,25 +2,25 @@ class Running : Activity
 {
     private double distance;
 
-    public void _setDistance(double d) { distance = d; }
+    public void SetDistance(double d) { distance = d; }
 
-    public override double _getDistance()
+    public override double GetDistance()
     {
         return distance;
     }
 
-    public override double _getSpeed()
+    public override double GetSpeed()
     {
-        return distance / (_getMinutes() / 60.0);
+        return distance / (GetMinutes() / 60.0);
     }
 
-    public override double _getPace()
+    public override double GetPace()
     {
-        return _getMinutes() / distance;
+        return GetMinutes() / distance;
     }
 
-    public override string _getSummary()
+    public override string GetSummary()
     {
-        return $"{_getDate()} Running ({_getMinutes()} min): Distance {_getDistance():F2} km, Speed {_getSpeed():F2} kph, Pace: {_getPace():F2} min per km";
+        return $"{GetDate()} Running ({GetMinutes()} min): Distance {GetDistance():F2} km, Speed {GetSpeed():F2} kph, Pace: {GetPace():F2} min per km";
     }
 }

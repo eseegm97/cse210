@@ -2,25 +2,25 @@ class Cycling : Activity
 {
     private double speed;
 
-    public void _setSpeed(double s) { speed = s; }
+    public void SetSpeed(double s) { speed = s; }
 
-    public override double _getDistance()
+    public override double GetDistance()
     {
-        return speed * (_getMinutes() / 60.0);
+        return speed * (GetMinutes() / 60.0);
     }
 
-    public override double _getSpeed()
+    public override double GetSpeed()
     {
         return speed;
     }
 
-    public override double _getPace()
+    public override double GetPace()
     {
         return 60 / speed;
     }
 
-    public override string _getSummary()
+    public override string GetSummary()
     {
-        return $"{_getDate()} Cycling ({_getMinutes()} min): Distance {_getDistance():F2} km, Speed {_getSpeed():F2} kph, Pace: {_getPace():F2} min per km";
+        return $"{GetDate()} Cycling ({GetMinutes()} min): Distance {GetDistance():F2} km, Speed {GetSpeed():F2} kph, Pace: {GetPace():F2} min per km";
     }
 }
