@@ -1,7 +1,7 @@
 class Reception : Event {
-    public string rsvpEmail;
+    public string _rsvpEmail;
 
     public override string GetFullDetails() {
-        return $"{base.GetFullDetails()}. RSVP at: {rsvpEmail}";
+        return $"{base.GetFullDetails()}. RSVP at: {_rsvpEmail}";
     }
 }

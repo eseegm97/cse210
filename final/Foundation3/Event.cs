@@ -1,19 +1,19 @@
 class Event {
-    public string title;
-    public string description;
-    public string date;
-    public string time;
-    public Address address;
+    public string _title;
+    public string _description;
+    public string _date;
+    public string _time;
+    public Address _address;
 
     public string GetStandardDetails() {
-        return $"{title} on {date} at {time}";
+        return $"{_title} on {_date} at {_time}";
     }
 
     public virtual string GetFullDetails() {
-        return $"{GetStandardDetails()}, located at {address.GetFullAddress()}";
+        return $"{GetStandardDetails()}, located at {_address.GetFullAddress()}";
     }
 
     public string GetShortDescription() {
-        return $"{title}: {description}";
+        return $"{_title}: {_description}";
     }
 }

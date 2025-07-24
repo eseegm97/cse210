@@ -1,12 +1,12 @@
 class Address
 {
-    public string street;
-    public string city;
-    public string stateOrProvince;
-    public string country;
+    public string _street;
+    public string _city;
+    public string _stateOrProvince;
+    public string _country;
 
     public string GetFullAddress()
     {
-        return $"{street}, {city}, {stateOrProvince}, {country}";
+        return $"{_street}, {_city}, {_stateOrProvince}, {_country}";
     }
 }

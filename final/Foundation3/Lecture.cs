@@ -1,8 +1,8 @@
 class Lecture : Event {
-    public string speakerName;
-    public int capacity;
+    public string _speakerName;
+    public int _capacity;
 
     public override string GetFullDetails() {
-        return $"{base.GetFullDetails()}. Speaker: {speakerName}, Capacity: {capacity}";
+        return $"{base.GetFullDetails()}. Speaker: {_speakerName}, Capacity: {_capacity}";
     }
 }
