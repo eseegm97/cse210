@@ -1,22 +1,22 @@
 class Cycling : Activity
 {
-    private double speed;
+    private double _speed;
 
-    public void SetSpeed(double s) { speed = s; }
+    public void SetSpeed(double s) { _speed = s; }
 
     public override double GetDistance()
     {
-        return speed * (GetMinutes() / 60.0);
+        return _speed * (GetMinutes() / 60.0);
     }
 
     public override double GetSpeed()
     {
-        return speed;
+        return _speed;
     }
 
     public override double GetPace()
     {
-        return 60 / speed;
+        return 60 / _speed;
     }
 
     public override string GetSummary()

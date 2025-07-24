@@ -1,12 +1,12 @@
 class Swimming : Activity
 {
-    private int laps;
+    private int _laps;
 
-    public void SetLaps(int l) { laps = l; }
+    public void SetLaps(int l) { _laps = l; }
 
     public override double GetDistance()
     {
-        return laps * 0.05;
+        return _laps * 0.05;
     }
 
     public override double GetSpeed()

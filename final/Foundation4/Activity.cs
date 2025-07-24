@@ -1,13 +1,13 @@
 class Activity
 {
-    private string date;
-    private int minutes;
+    private string _date;
+    private int _minutes;
 
-    public void SetDate(string d) { date = d; }
-    public string GetDate() { return date; }
+    public void SetDate(string d) { _date = d; }
+    public string GetDate() { return _date; }
 
-    public void SetMinutes(int m) { minutes = m; }
-    public int GetMinutes() { return minutes; }
+    public void SetMinutes(int m) { _minutes = m; }
+    public int GetMinutes() { return _minutes; }
 
     public virtual double GetDistance() { return 0; }
 
@@ -17,6 +17,6 @@ class Activity
 
     public virtual string GetSummary()
     {
-        return $"{date} Activity ({minutes} min)";
+        return $"{_date} Activity ({_minutes} min)";
     }
 }

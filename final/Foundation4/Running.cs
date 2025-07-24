@@ -1,22 +1,22 @@
 class Running : Activity
 {
-    private double distance;
+    private double _distance;
 
-    public void SetDistance(double d) { distance = d; }
+    public void SetDistance(double d) { _distance = d; }
 
     public override double GetDistance()
     {
-        return distance;
+        return _distance;
     }
 
     public override double GetSpeed()
     {
-        return distance / (GetMinutes() / 60.0);
+        return _distance / (GetMinutes() / 60.0);
     }
 
     public override double GetPace()
     {
-        return GetMinutes() / distance;
+        return GetMinutes() / _distance;
     }
 
     public override string GetSummary()
