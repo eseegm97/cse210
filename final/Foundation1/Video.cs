@@ -1,36 +1,36 @@
 class Video {
-    private string title;
-    private string author;
-    private int lengthInSeconds;
-    private List<Comment> comments = new List<Comment>();
+    private string _title;
+    private string _author;
+    private int _lengthInSeconds;
+    private List<Comment> _comments = new List<Comment>();
 
     public Video(string title, string author, int lengthInSeconds) {
-        this.title = title;
-        this.author = author;
-        this.lengthInSeconds = lengthInSeconds;
+        _title = title;
+        _author = author;
+        _lengthInSeconds = lengthInSeconds;
     }
 
     public string GetTitle() {
-        return title;
+        return _title;
     }
 
     public string GetAuthor() {
-        return author;
+        return _author;
     }
 
     public int GetLengthInSeconds() {
-        return lengthInSeconds;
+        return _lengthInSeconds;
     }
 
     public void AddComment(Comment comment) {
-        comments.Add(comment);
+        _comments.Add(comment);
     }
 
     public int GetCommentCount() {
-        return comments.Count;
+        return _comments.Count;
     }
 
     public List<Comment> GetComments() {
-        return new List<Comment>(comments);
+        return new List<Comment>(_comments);
     }
 }

@@ -1,17 +1,17 @@
 class Comment {
-    private string commenterName;
-    private string commentText;
+    private string _commenterName;
+    private string _commentText;
 
     public Comment(string commenterName, string commentText) {
-        this.commenterName = commenterName;
-        this.commentText = commentText;
+        _commenterName = commenterName;
+        _commentText = commentText;
     }
 
     public string GetCommenterName() {
-        return commenterName;
+        return _commenterName;
     }
 
     public string GetCommentText() {
-        return commentText;
+        return _commentText;
     }
 }
