@@ -1,40 +1,40 @@
 public class Product
 {
-    private string name;
-    private string productId;
-    private double pricePerUnit;
-    private int quantity;
+    private string _name;
+    private string _productId;
+    private double _pricePerUnit;
+    private int _quantity;
 
     public Product(string name, string productId, double pricePerUnit, int quantity)
     {
-        this.name = name;
-        this.productId = productId;
-        this.pricePerUnit = pricePerUnit;
-        this.quantity = quantity;
+        _name = name;
+        _productId = productId;
+        _pricePerUnit = pricePerUnit;
+        _quantity = quantity;
     }
 
-    public string Name
+    public string GetName()
     {
-        get { return name; }
+        return _name;
     }
 
-    public string ProductId
+    public string GetProductId()
     {
-        get { return productId; }
+        return _productId;
     }
 
-    public double PricePerUnit
+    public double GetPricePerUnit()
     {
-        get { return pricePerUnit; }
+        return _pricePerUnit;
     }
 
-    public int Quantity
+    public int GetQuantity()
     {
-        get { return quantity; }
+        return _quantity;
     }
 
     public double GetTotalCost()
     {
-        return pricePerUnit * quantity;
+        return _pricePerUnit * _quantity;
     }
 }
